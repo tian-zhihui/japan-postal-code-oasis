@@ -4,7 +4,9 @@ JavaScript module for Japan Postal Code.
 Forked from https://github.com/ajaxzip3/ajaxzip3.github.io
 
 ## How to install
-TBD
+```
+npm install japan-postal-code
+```
 
 ## How to use
 

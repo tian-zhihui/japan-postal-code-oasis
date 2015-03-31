@@ -14,9 +14,10 @@ npm install japan-postal-code
 var postal_code = require('postal_code');
 
 postal_code.get('1000001', function(address) {
-  console.log(address.prefecture) // => 東京都
-  console.log(address.city) // => 千代田区
-  console.log(address.area) // => 千代田
+  console.log(address.prefecture); // => "東京都"
+  console.log(address.city); // => "千代田区"
+  console.log(address.area); // => "千代田"
+  console.log(address.street); // => ""
 });
 ```
 

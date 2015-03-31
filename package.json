@@ -1,7 +1,7 @@
 {
   "name": "japan-postal-code",
   "version": "0.1.0",
-  "description": "Japan Postal code library",
+  "description": "Japan postal code library",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -9,8 +9,7 @@
   },
   "keywords": [
     "zip",
-    "postal",
-    "code"
+    "postal code"
   ],
   "author": "mzp",
   "license": "MIT License",

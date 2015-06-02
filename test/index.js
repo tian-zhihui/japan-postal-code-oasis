@@ -8,7 +8,7 @@ describe('#get', function () {
       expect(address.city).to.eql('千代田区');
       expect(address.area).to.eql('千代田');
       expect(address.street).to.eql('');
-      delete global.zipdata;
+      delete global.$yubin;
       done();
     });
   });
@@ -19,7 +19,7 @@ describe('#get', function () {
       expect(address.city).to.eql('千代田区');
       expect(address.area).to.eql('千代田');
       expect(address.street).to.eql('');
-      delete global.zipdata;
+      delete global.$yubin;
       done();
     });
   });

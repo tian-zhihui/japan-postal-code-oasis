@@ -34,7 +34,7 @@
 
 var jsonp = require('jsonp')
 
-JSONDATA = 'https://ajaxzip3.github.io/zipdata';
+JSONDATA = 'https://yubinbango.github.io/yubinbango-data/data';
 CACHE = [];
 
 
@@ -103,8 +103,8 @@ var parse = function(nzip, data, callback){
 
 fetchRemote = function (nzip, callback) {
   var zip3 = nzip.substr(0,3);
-  var url = JSONDATA+'/zip-'+zip3+'.js';
-  jsonp(url, { name: 'zipdata'}, function(error, data) {
+  var url = JSONDATA+'/'+zip3+'.js';
+  jsonp(url, { name: '$yubin'}, function(error, data) {
     if (!error) {
       CACHE[zip3] = data;
       parse(nzip, data, callback);

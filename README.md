@@ -1,11 +1,19 @@
 # Japan Postal code
+
 JavaScript module for Japan Postal Code.
 
-Forked from https://github.com/ajaxzip3/ajaxzip3.github.io
+Forked from https://github.com/mzp/japan-postal-code
+
+## Features
+
+* ES6 modules
+* Promise
+* No denpendency (remove jsonp, you can choose bundle version or host it your self)
+* Customize data url
 
 ## How to install
 ```
-npm install japan-postal-code
+npm install japan-postal-code-oasis
 ```
 
 ## How to use

@@ -1,6 +1,9 @@
 /* ================================================================ *
     ajaxzip3.js ---- AjaxZip3 郵便番号→住所変換ライブラリ
 
+    Copyright (c) 2018 othree
+    https://github.com/othree/japan-postal-code-oasis
+
     Copyright (c) 2015 MIZUNO Hiroki
     http://github.com/mzp/japan-postal-code
 

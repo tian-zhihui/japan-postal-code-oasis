@@ -85,8 +85,8 @@ const fetchParse = function (nzip, options, callback) {
     }
   };
 
-  xhr.open('GET', `${options}zip-${zip3}.json`, true);
-  xhr.send();
+  req.open('GET', `${options}zip-${zip3}.json`, true);
+  req.send();
 };
 
 const get = (zip_code, options, callback) => {

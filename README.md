@@ -1,4 +1,4 @@
-# Japan Postal code
+# Japan Postal code oasis
 
 JavaScript module for Japan Postal Code.
 

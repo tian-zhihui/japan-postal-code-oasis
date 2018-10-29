@@ -18,7 +18,7 @@
     my $DISP_ENC  = 'utf8';         # 表示用のエンコーディング
     my $CSV_FILE  = 'ken_all.csv';  # 入力元CSVファイル名（デフォルト）
     my $CSV_JIGYO = 'jigyosyo.csv'; # 事業所要郵便番号CSVファイル（オプション）
-    my $JSON_BASE = '../data/zip-%s.json';  # 出力先JSONファイル名
+    my $JSON_BASE = '../zipdata/zip-%s.json';  # 出力先JSONファイル名
 # ---------------------------------------------------------------- #
     # local $| = 1;
     &main( @ARGV );

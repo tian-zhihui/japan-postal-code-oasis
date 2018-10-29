@@ -19,9 +19,9 @@ npm install japan-postal-code-oasis
 ## How to use
 
 ```js
-var postal_code = require('japan-postal-code');
+const postal = import 'japan-postal-code-oasis';
 
-postal_code.get('1000001', function(address) {
+postal('1000001', 'DATA_URI_BASE').then(addressa => {
   console.log(address.prefecture); // => "東京都"
   console.log(address.city); // => "千代田区"
   console.log(address.area); // => "千代田"

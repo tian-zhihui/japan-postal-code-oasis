@@ -35,6 +35,8 @@
     OTHER DEALINGS IN THE SOFTWARE.
 * ================================================================ */
 
+const DEFAULTS = {};
+
 const CACHE = {};
 
 const PREFMAP = [
@@ -49,6 +51,19 @@ const PREFMAP = [
   '福岡県',   '佐賀県',   '長崎県',   '熊本県',   '大分県',
   '宮崎県',   '鹿児島県', '沖縄県'
 ];
+
+
+const base = (options = {}) => {
+  if (typeof options === 'string') {
+    return options;
+  } else if (typeof options === 'object' && options.base) {
+    return options.base;
+  } else if (DEFAULTS.base) {
+    return DEFAULTS.base;
+  } else {
+    throw new Error('No DATA_URI_BASE provided');
+  }
+}
 
 
 const parse = (nzip, data, callback) => {
@@ -85,7 +100,7 @@ const fetchParse = function (nzip, options, callback) {
     }
   };
 
-  req.open('GET', `${options}zip-${zip3}.json`, true);
+  req.open('GET', `${base(options)}zip-${zip3}.json`, true);
   req.send();
 };
 
@@ -113,4 +128,16 @@ const get = (zip_code, options, callback) => {
 };
 
 
-export default (zip, options = {}) => new Promise(resolve => get(zip, options, resolve));
+const entry = (zip, options = {}) => new Promise(resolve => get(zip, options, resolve));
+
+entry.configure = (options = {}) => {
+  if (typeof options === 'string') {
+    DEFAULTS.base = options;
+  } else if (typeof options === 'object') {
+    for (const key of options) {
+      DEFAULTS[key] = options[key];
+    }
+  }
+};
+
+export default entry;

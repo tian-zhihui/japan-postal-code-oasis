@@ -42,7 +42,7 @@ const postal = import 'japan-postal-code-oasis';
 
 const DATA_URI_BASE = 'https://example.com/path/to/data/'; // Update to your host
 
-postal('1000001', 'DATA_URI_BASE').then(address => {
+postal('1000001', DATA_URI_BASE).then(address => {
   console.log(address.prefecture); // => "東京都"
   console.log(address.city); // => "千代田区"
   console.log(address.area); // => "千代田"

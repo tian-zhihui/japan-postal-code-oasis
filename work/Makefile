@@ -3,6 +3,10 @@
 
 all: KEN_ALL.CSV JIGYOSYO.CSV
 	perl ./csv2jsonzip.pl KEN_ALL.CSV JIGYOSYO.CSV
+	for file in ../zipdata/*.json; do \
+		echo "Normalize $$file" ; \
+		cat ../zipdata/$$file | jq -S -c -M -j . | sponge ../zipdata/$$file ; \
+	done
 
 KEN_ALL.CSV: ken_all.zip
 	unzip -o ken_all.zip

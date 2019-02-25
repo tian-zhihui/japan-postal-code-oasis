@@ -1,6 +1,6 @@
 {
   "name": "japan-postal-code-oasis",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "Japan postal code library",
   "main": "index.js",
   "repository": {

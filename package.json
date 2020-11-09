@@ -1,6 +1,6 @@
 {
   "name": "japan-postal-code-oasis",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Japan postal code library",
   "main": "index.js",
   "repository": {
@@ -20,8 +20,7 @@
     "zuul": "~2.1.1",
     "expect.js": "~0.3.1"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "scripts": {
     "test": "zuul -- test/*.js",
     "test-local": "zuul --local -- test/*.js"

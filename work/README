@@ -1,0 +1,6 @@
+Requirement
+===========
+
+- JSON perl module
+- jq
+- sponge (moreutils)

@@ -8,8 +8,8 @@ Forked from https://github.com/mzp/japan-postal-code
 
 * ES6 modules
 * Promise
-* No denpendency
-* Customize data url
+* No dependency
+* Customize data url(must host yourself)
 * Bundle version (WIP)
 
 ## How to install
@@ -23,7 +23,8 @@ npm install japan-postal-code-oasis
 ```js
 const postal = import 'japan-postal-code-oasis';
 
-const DATA_URI_BASE = 'https://example.com/path/to/data/'; // Update to your host
+const DATA_URI_BASE = 'https://example.com/path/to/data/';
+// Update the URL to the base URL of your JSON data files
 
 postal.configure(DATA_URI_BASE);
 
@@ -40,7 +41,8 @@ or
 ```js
 const postal = import 'japan-postal-code-oasis';
 
-const DATA_URI_BASE = 'https://example.com/path/to/data/'; // Update to your host
+const DATA_URI_BASE = 'https://example.com/path/to/data/';
+// Update the URL to the base URL of your JSON data files
 
 postal('1000001', DATA_URI_BASE).then(address => {
   console.log(address.prefecture); // => "東京都"
